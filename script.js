@@ -16,3 +16,17 @@ function hasPlayerWonTheRound(player, computer) {
     }
 }
   
+function getRoundResults(userOption) {
+    const computerResult = getRandomComputerResult();
+    if(userOption === computerResult) {
+      return `It's a tie! Both chose ${userOption}`;
+    }
+    const hasPlayerWon = hasPlayerWonTheRound(userOption, computerResult);
+    if(hasPlayerWon){
+      playerScore++;
+      return `Player wins! ${userOption} beats ${computerResult}`;
+    } else {
+      computerScore++;
+      return `Computer wins! ${computerResult} beats ${userOption}`;
+    }
+}
