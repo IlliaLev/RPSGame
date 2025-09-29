@@ -36,4 +36,14 @@ function showResults(userOption) {
     playerScoreSpanElement.innerText = playerScore;
     computerScoreSpanElement.innerText = computerScore;
     roundResultsMsg.innerText = res;
+
+    if(playerScore === 3) {
+        winnerMsgElement.innerText = "Player has won the game!";
+        resetGameBtn.style.display = "block";
+        optionsContainer.style.display = "none";
+    } else if(computerScore === 3) {
+        winnerMsgElement.innerText = "Computer has won the game!";
+        resetGameBtn.style.display = "block";
+        optionsContainer.style.display = "none";
+    }
 };
