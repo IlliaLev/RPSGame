@@ -30,3 +30,10 @@ function getRoundResults(userOption) {
       return `Computer wins! ${computerResult} beats ${userOption}`;
     }
 }
+
+function showResults(userOption) {
+    const res = getRoundResults(userOption);
+    playerScoreSpanElement.innerText = playerScore;
+    computerScoreSpanElement.innerText = computerScore;
+    roundResultsMsg.innerText = res;
+};
